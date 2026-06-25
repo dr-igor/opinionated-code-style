@@ -1,7 +1,8 @@
 {
-  "name": "@igor/eslint-config-typescript",
+  "name": "@igorlabworks/eslint-config-typescript",
   "version": "0.1.0",
   "type": "module",
+  "files": ["eslint.config.base.ts"],
   "exports": {
     ".": "./eslint.config.base.ts"
   },
