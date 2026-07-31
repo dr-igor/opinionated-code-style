@@ -1,0 +1,18 @@
+{
+  "name": "@igorlabworks/eslint-config-svelte",
+  "version": "0.1.0",
+  "type": "module",
+  "files": ["eslint.config.svelte.ts", "eslint.config.sveltekit.ts"],
+  "exports": {
+    ".": "./eslint.config.svelte.ts",
+    "./sveltekit": "./eslint.config.sveltekit.ts"
+  },
+  "peerDependencies": {
+    "eslint": "^10",
+    "eslint-plugin-svelte": "^3.19.0",
+    "svelte": "^5",
+    "svelte-eslint-parser": "^1.8.0",
+    "typescript": "^6",
+    "typescript-eslint": "^8.61.1"
+  }
+}

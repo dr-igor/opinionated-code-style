@@ -1,0 +1,58 @@
+# Opinionated base Ruff config (ruff 0.15.x).
+#
+# Consumers vendor this file and reference it:
+#
+#   [tool.ruff]
+#   extend = "ruff.base.toml"
+#
+# `target-version` and `line-length` are deliberately NOT set here so they
+# inherit from the consuming project (its requires-python wins). Override in
+# the project's own [tool.ruff] if needed.
+
+[lint]
+select = [
+  "F",
+  "E",
+  "W",
+  "I",
+  "UP",
+  "ANN",
+  "PTH",
+  "B",
+  "SIM",
+  "C4",
+  "PERF",
+  "FLY",
+  "RET",
+  "TRY",
+  "PGH",
+  "RUF",
+  "C901",
+  "ASYNC",
+  "PLC0206",
+  "PLC0208",
+  "PLC0415",
+  "PLC1802",
+  "PLC1901",
+  "PLC2401",
+  "PLC2403",
+  "PLE",
+  "PLR",
+]
+
+ignore = ["ANN401", "TRY003"]
+
+[lint.pycodestyle]
+max-line-length = 88
+
+[lint.pylint]
+max-positional-args = 3
+
+[lint.flake8-annotations]
+allow-star-arg-any = true
+mypy-init-return = true
+suppress-dummy-args = true
+
+[lint.per-file-ignores]
+"**/tests/**" = ["ANN", "PLR0913", "S101"]
+"**/conftest.py" = ["ANN"]
